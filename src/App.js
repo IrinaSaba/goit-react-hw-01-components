@@ -1,9 +1,10 @@
 import "./App.css";
 import Profile from "./components/Profile/Profile.jsx";
+import Statistics from "./components/Statistics/Statistics.jsx"
 import data from "./data/data.json";
-import friends from "./data/friends.json";
+// import friends from "./data/friends.json";
 import user from "./data/user.json";
-import transactions from "./data/transactions.json";
+// import transactions from "./data/transactions.json";
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
         location={user.location}
         stats={user.stats}
       />
+     <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
       {/* <Friendlist friends={friends} />
-    <Statistics data={data} />
+  
     <TransactionHistory transactions={transactions}/> */}
     </>
   );

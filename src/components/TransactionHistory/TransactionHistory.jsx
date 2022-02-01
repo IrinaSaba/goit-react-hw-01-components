@@ -1,3 +1,5 @@
+import s from '../TransactionHistory/TransactionHistory.scss'
+
 const TransactionHistory = ({items}) => {
    // console.log(items)
    return (

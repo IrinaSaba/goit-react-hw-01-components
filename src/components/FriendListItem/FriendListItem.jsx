@@ -1,3 +1,5 @@
+import s from '../FriendListItem/FriendListItem.scss'
+
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>

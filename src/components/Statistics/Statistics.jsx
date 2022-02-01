@@ -1,3 +1,5 @@
+import s from '../Statistics/Statistics.scss'
+
 const Statistics = ({title, stats}) => {
    return (
    <section className="statistics"> 

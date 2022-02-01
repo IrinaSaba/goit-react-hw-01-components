@@ -1,12 +1,13 @@
+import PropTypes from "prop-types";
 import FriendListItem from '../FriendListItem/FriendListItem'
-import s from '../FriendList/FriendList.scss'
+import s from '../FriendList/FriendList.module.scss'
 
 const FriendList = ({friends}) => {
    // console.log(friends)
    return (
-      <ul className="friend-list">
+      <ul className={s["friend-list"]}>
          {friends.map(friend => (
-            <li className="item" key={friend.id}>
+            <li className={s["item"]} key={friend.id}>
                <FriendListItem
                   avatar={friend.avatar}
                   name={friend.name}
@@ -17,5 +18,14 @@ const FriendList = ({friends}) => {
       </ul>   
    )
 };
+
+FriendList.propTypes = {
+   friends: PropTypes.arrayOf(
+   PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+      isOnline: PropTypes.bool,
+   }).isRequired),
+ };
  
  export default FriendList;

@@ -1,9 +1,10 @@
-import s from '../TransactionHistory/TransactionHistory.scss'
+import PropTypes from "prop-types";
+import s from '../TransactionHistory/TransactionHistory.module.scss'
 
 const TransactionHistory = ({items}) => {
    // console.log(items)
    return (
-      <table className="transaction-history">
+      <table className={s["transaction-history"]}>
          <thead>
             <tr>
                <th>Type</th>
@@ -23,5 +24,15 @@ const TransactionHistory = ({items}) => {
     </table>
    )
 };
+
+TransactionHistory.propTypes = {
+   friends: PropTypes.arrayOf(
+   PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.number,
+      currency: PropTypes.string,
+   }).isRequired),
+ };
  
  export default TransactionHistory;

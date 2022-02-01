@@ -1,4 +1,4 @@
-import FriendListItem from './FriendListItem/FriendListtem'
+import FriendListItem from '../FriendListItem/FriendListtem'
 
 const FriendList = ({friends}) => {
    // console.log(friends)
